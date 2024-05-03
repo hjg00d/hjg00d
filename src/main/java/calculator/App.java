@@ -8,13 +8,14 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Integer> results = new ArrayList<>();
-
+ // integer은 랩퍼클래스
+        // ArrayList 배열 -> 중간에 삭제하면 그 칸을 비워두지 않고 뒤에껄 끌어와서 배열의 길이를 조절한다
      //   int[] results = new int[10];
      //   int index = 0; // 값이 0부터 올 수 있게 해준다
 
          // do-while 반목문이 더 깔끔하다
         do {
-            System.out.print("First number: ");
+            System.out.print("First number: ");  // sout 을 생활화
             int num1 = sc.nextInt();
             System.out.print("Second number: ");
             int num2 = sc.nextInt();
@@ -23,6 +24,7 @@ public class App {
  // 1 chapter 숫자 입력하기
             int result = 0;
 // switch 피연산자 + case 조건 -> if 문을 쓸 때보다 더 깔끔하게 사용할 수 있음
+            // int result 값과 case에서 result 값처럼 맞춰야지 제대로 작동한다.
             switch(operator) {
                 case '+':
                     result = num1 + num2;
@@ -51,6 +53,7 @@ public class App {
 
             System.out.println("remove? (Delete when you enter remove)");
             if(Objects.equals(sc.next(), "remove")) {  // 그냥 b:라고 입력하면 에러가 뜬다
+                // Objects.equals에 대해선 추가 공부 더
                 results.remove(0);  // remove, 0 앞에는 따로 입력하지 않고 바로 쓴다. 해결하는데 1시간 걸렸다
             }
             // index == 10 -> 마지막 번호가 9 이므로 다 채웠다는 것을 의미할 수 있다
